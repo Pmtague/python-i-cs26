@@ -31,3 +31,16 @@ import sys
 import calendar
 from datetime import datetime
 
+month = datetime.now().month
+year = datetime.now().year
+
+args = sys.argv
+print(args)
+
+if len(args) == 2:
+	month = int(args[1])
+	print(calendar.TextCalendar().prmonth(year, month))
+elif len(args) == 3:
+	month = int(args[1])
+	year = int(args[2])
+print(calendar.TextCalendar().prmonth(year, month))
